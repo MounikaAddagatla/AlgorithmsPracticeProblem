@@ -12,7 +12,7 @@ namespace AlogarithamPracticeProblem
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort");
+                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort \n4. BubbleSort  \n5. MergeSort");
                 options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -53,6 +53,12 @@ namespace AlogarithamPracticeProblem
                         BubbleSort bubbleSort = new BubbleSort();
                         arr = bubbleSort.Sort(arr);
                         bubbleSort.Display(arr);
+                        break;
+                    case 5:
+                        MergeSort merge = new MergeSort();
+                        merge.Sort(textArray, 0, textArray.Length - 1);
+                        Console.WriteLine("\nSorted array");
+                        merge.PrintArray(textArray);
                         break;
                     default:
                         Console.WriteLine("Exit");
