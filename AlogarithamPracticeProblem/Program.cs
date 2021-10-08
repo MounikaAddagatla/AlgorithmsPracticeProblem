@@ -12,7 +12,7 @@ namespace AlogarithamPracticeProblem
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort ");
+                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort");
                 options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -24,7 +24,7 @@ namespace AlogarithamPracticeProblem
                         Console.ReadLine();
                         break;
                     case 2:
-                        string filepath = @"E:\AlgorithmsPracticeProblem\AlogarithamPracticeProblem\NewFolder\Word.txt";
+                        string filepath = @"E:\AlgorithmsPracticeProblem\AlogarithamPracticeProblem\WordFile\Word.txt";
                         string text = File.ReadAllText(filepath);
                         string[] textArray = text.Split(" ");
                         BinarySearch binarySearch = new BinarySearch(textArray);
@@ -40,7 +40,14 @@ namespace AlogarithamPracticeProblem
                             Console.WriteLine("the word {0} is not found", word);
                         }
                         break;
-
+                    case 3:
+                        string filepathins = @"E:\AlgorithmsPracticeProblem\AlogarithamPracticeProblem\WordFile\Word.txt";
+                        string sort = File.ReadAllText(filepathins);
+                        string[] sortArray = sort.Split(" ");
+                        InsertionSort insertionSort = new InsertionSort();
+                        insertionSort.Sort(sortArray);
+                        insertionSort.Display(sortArray);
+                        break;
                     default:
                         Console.WriteLine("Exit");
                         break;
