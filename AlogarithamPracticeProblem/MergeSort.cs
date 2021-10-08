@@ -55,23 +55,26 @@ namespace AlogarithamPracticeProblem
                 k++;
             }
         }
-        public void Sort(string[] textArray, int l, int r)
+        public void Sort(string[] arr, int l, int r)
         {
             if (l < r)
             {
                 // Find the mid value
                 int m = l + (r - l) / 2;
-                Sort(textArray, l, m);
-                Sort(textArray, m + 1, r);
-                Merge(textArray, l, m, r);
+                Sort(arr, l, m);
+                Sort(arr, m + 1, r);
+                Merge(arr, l, m, r);
             }
         }
+
+        
+
         //Printing Sorted Array
-        public void PrintArray(string[] textArray)
+        public void PrintArray(string[] arr)
         {
-            int n = textArray.Length;
+            int n = arr.Length;
             for (int i = 0; i < n; ++i)
-                Console.Write(textArray[i] + " ");
+                Console.Write(arr[i] + " ");
             Console.WriteLine();
         }
 

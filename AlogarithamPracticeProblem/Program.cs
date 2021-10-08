@@ -12,7 +12,8 @@ namespace AlogarithamPracticeProblem
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort \n4. BubbleSort  \n5. MergeSort");
+                string[] textArray;
+                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort \n4. BubbleSort  \n5. MergeSort \n6. Anaragam");
                 options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -26,7 +27,7 @@ namespace AlogarithamPracticeProblem
                     case 2:
                         string filepath = @"E:\AlgorithmsPracticeProblem\AlogarithamPracticeProblem\WordFile\Word.txt";
                         string text = File.ReadAllText(filepath);
-                        string[] textArray = text.Split(" ");
+                        textArray = text.Split(" ");
                         BinarySearch binarySearch = new BinarySearch(textArray);
                         Console.WriteLine("Enter a word to search:");
                         string word = Console.ReadLine();
@@ -55,10 +56,15 @@ namespace AlogarithamPracticeProblem
                         bubbleSort.Display(arr);
                         break;
                     case 5:
+
                         MergeSort merge = new MergeSort();
                         merge.Sort(textArray, 0, textArray.Length - 1);
                         Console.WriteLine("\nSorted array");
                         merge.PrintArray(textArray);
+                        break;
+                    case 6:
+                        Anagram anagram = new Anagram();
+                        anagram.CheckAnagram("asdf", "fdsa");
                         break;
                     default:
                         Console.WriteLine("Exit");
