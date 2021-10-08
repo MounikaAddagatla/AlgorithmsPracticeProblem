@@ -48,6 +48,12 @@ namespace AlogarithamPracticeProblem
                         insertionSort.Sort(sortArray);
                         insertionSort.Display(sortArray);
                         break;
+                    case 4:
+                        int[] arr = { 5, 7, 1, 3, 60, 12, 68 };
+                        BubbleSort bubbleSort = new BubbleSort();
+                        arr = bubbleSort.Sort(arr);
+                        bubbleSort.Display(arr);
+                        break;
                     default:
                         Console.WriteLine("Exit");
                         break;
