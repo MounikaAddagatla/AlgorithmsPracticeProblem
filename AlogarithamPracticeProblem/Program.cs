@@ -13,7 +13,7 @@ namespace AlogarithamPracticeProblem
             while (!isExit)
             {
                 string[] textArray;
-                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort \n4. BubbleSort  \n5. MergeSort \n6. Anaragam");
+                Console.WriteLine("choose \n1.PermutationOfString \n2. BubbleSort \n3. InsertionSort \n4. BubbleSort  \n5. MergeSort \n6. Anaragam  \n7.  FindTHe Number");
                 options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -57,14 +57,19 @@ namespace AlogarithamPracticeProblem
                         break;
                     case 5:
 
-                        MergeSort merge = new MergeSort();
-                        merge.Sort(textArray, 0, textArray.Length - 1);
-                        Console.WriteLine("\nSorted array");
-                        merge.PrintArray(textArray);
+                        //MergeSort merge = new MergeSort();
+                        //merge.Sort(textArray, 0, textArray.Length - 1);
+                        //Console.WriteLine("\nSorted array");
+                        //merge.PrintArray(textArray);
                         break;
                     case 6:
                         Anagram anagram = new Anagram();
                         anagram.CheckAnagram("asdf", "fdsa");
+                        break;
+                    case 7:
+                        Console.WriteLine("choose a number between 1-100");
+                        FindTheNumber magic = new FindTheNumber();
+                        magic.Guess();
                         break;
                     default:
                         Console.WriteLine("Exit");
